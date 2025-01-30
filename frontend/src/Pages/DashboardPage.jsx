@@ -19,7 +19,7 @@ const DashboardPage = () => {
 
   const fetchData = async () => {
     try {
-      const usersRes = await axios.get("http://localhost:4000/api/v1/user/all-users", {
+      const usersRes = await axios.get("https://community-problem-tracker-3.onrender.com/api/v1/user/all-users", {
         withCredentials: true,
       });
       const issuesRes = issues_;
@@ -34,7 +34,7 @@ const DashboardPage = () => {
 
   const deleteUser = async (userId) => {
     try {
-      await axios.delete(`http://localhost:4000/api/v1/user/delete-user/${userId}`, { withCredentials: true });
+      await axios.delete(`https://community-problem-tracker-3.onrender.com/api/v1/user/delete-user/${userId}`, { withCredentials: true });
       setUsers(users.filter((user) => user._id !== userId));
       setTotalUsers((prev) => prev - 1);
     } catch (error) {
@@ -44,7 +44,7 @@ const DashboardPage = () => {
 
   const deleteIssue = async (issueId) => {
     try {
-      await axios.delete(`http://localhost:4000/api/v1/issues/delete/${issueId}`, { withCredentials: true });
+      await axios.delete(`https://community-problem-tracker-3.onrender.com/api/v1/issues/delete/${issueId}`, { withCredentials: true });
       setIssues(issues.filter((issue) => issue._id !== issueId));
       setTotalIssues((prev) => prev - 1);
     } catch (error) {

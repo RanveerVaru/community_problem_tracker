@@ -34,7 +34,7 @@ const Header = () => {
       }
       try {
         const encodedQuery = encodeURIComponent(searchQuery.trim());
-        const { data } = await axios.get(`http://localhost:4000/api/v1/issues/search?title=${encodedQuery}`);
+        const { data } = await axios.get(`https://community-problem-tracker-3.onrender.com/api/v1/issues/search?title=${encodedQuery}`);
         dispatch(setSearchResults(data.issues)); // Update Redux store with search results
       } catch (error) {
         console.error("Error searching issues:", error);

@@ -14,7 +14,7 @@ const MyIssuesPage = () => {
   useEffect(() => {
     const fetchMyIssues = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/v1/issues/get-my-issues", {
+        const response = await axios.get("https://community-problem-tracker-3.onrender.com/api/v1/issues/get-my-issues", {
           withCredentials: true,
         });
         console.log("response:", response.data.issues);

@@ -18,7 +18,7 @@ const IssueHomePage = () => {
   useEffect(() => {
     const fetchAllIssues = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/v1/issues/get-all-issues");
+        const response = await axios.get("https://community-problem-tracker-3.onrender.com/api/v1/issues/get-all-issues");
         if (response.data.success) {
           dispatch(getAllIssues(response.data.issues));
           setAllIssues(response.data.issues);

@@ -16,7 +16,7 @@ const IssueForm = () => {
   // Fetch issue details if editing
   useEffect(() => {
     if (id) {
-      axios.get(`http://localhost:4000/api/v1/issues/get-issue/${id}`, { withCredentials: true })
+      axios.get(`https://community-problem-tracker-3.onrender.com/api/v1/issues/get-issue/${id}`, { withCredentials: true })
         .then((res) => {
           const issue = res.data.issue;
           setTitle(issue.title);
@@ -41,7 +41,7 @@ const IssueForm = () => {
     try {
       if (id) {
         // Update issue if id exists
-        const response = await axios.put(`http://localhost:4000/api/v1/issues/update/${id}`, formData, {
+        const response = await axios.put(`https://community-problem-tracker-3.onrender.com/api/v1/issues/update/${id}`, formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
           withCredentials: true,
         });
@@ -49,7 +49,7 @@ const IssueForm = () => {
         
       } else {
         // Create new issue
-        const response = await axios.post('http://localhost:4000/api/v1/issues/create', formData, {
+        const response = await axios.post('https://community-problem-tracker-3.onrender.com/api/v1/issues/create', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
           withCredentials: true,
         });

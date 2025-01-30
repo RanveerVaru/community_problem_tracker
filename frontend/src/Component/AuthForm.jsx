@@ -24,8 +24,8 @@ const AuthForm = ({ type }) => {
     e.preventDefault();
     try {
       const url = type === "login" 
-        ? "http://localhost:4000/api/v1/user/login" 
-        : "http://localhost:4000/api/v1/user/signup";
+        ? "https://community-problem-tracker-3.onrender.com/api/v1/user/login" 
+        : "https://community-problem-tracker-3.onrender.com/api/v1/user/signup";
       
       const { data } = await axios.post(url, formData , {withCredentials: true});
 

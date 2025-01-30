@@ -23,7 +23,7 @@ const IssueCard = ({ issue }) => {
   // Fetch all comments
   const getCommentsOfPost = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/v1/comment/get-all-comments/${_id}`);
+      const response = await axios.get(`https://community-problem-tracker-3.onrender.com/api/v1/comment/get-all-comments/${_id}`);
       setComments(response.data.comments);
       setShowComments(true);
     } catch (error) {
@@ -40,7 +40,7 @@ const IssueCard = ({ issue }) => {
         navigate('/login')
       } 
       await axios.post(
-        `http://localhost:4000/api/v1/comment/add-comment/${_id}`,
+        `https://community-problem-tracker-3.onrender.com/api/v1/comment/add-comment/${_id}`,
         { content: newComment },
         { withCredentials: true, headers: { "Content-Type": "application/json" } }
       );
@@ -55,7 +55,7 @@ const IssueCard = ({ issue }) => {
   const deleteIssue = async () => {
     if (!window.confirm("Are you sure you want to delete this issue?")) return;
     try {
-      const res = await axios.delete(`http://localhost:4000/api/v1/issues/delete/${_id}`, { withCredentials: true });
+      const res = await axios.delete(`https://community-problem-tracker-3.onrender.com/api/v1/issues/delete/${_id}`, { withCredentials: true });
       if (res.data.success) {
         toast.success("Issue deleted successfully!");
         window.location.reload();

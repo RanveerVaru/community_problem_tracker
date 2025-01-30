@@ -15,7 +15,7 @@ const SearchResults = () => {
     const fetchIssues = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:4000/api/v1/issues/search?title=${encodeURIComponent(searchQuery)}`);
+        const response = await axios.get(`https://community-problem-tracker-3.onrender.com/api/v1/issues/search?title=${encodeURIComponent(searchQuery)}`);
         setIssues(response.data.issues);
       } catch (err) {
         setError("Error fetching search results. Please try again.");

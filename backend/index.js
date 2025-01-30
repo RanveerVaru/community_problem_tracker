@@ -30,7 +30,7 @@ cloudinary.config({
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(cors({
-    origin : "http://localhost:5173",
+    origin : "https://community-problem-tracker-3.onrender.com/",
     credentials: true  // enable set cookie
 }));
 app.use(express.json());
