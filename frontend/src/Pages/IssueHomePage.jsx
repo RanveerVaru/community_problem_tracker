@@ -49,7 +49,7 @@ const IssueHomePage = () => {
               <IssueCard key={issue._id} issue={issue} />
             ))
         ) : (
-          <p>No issues found.</p>
+          <p className="text-center mt-2">No issues found.</p>
         )}
       </div>
       <Footer />
