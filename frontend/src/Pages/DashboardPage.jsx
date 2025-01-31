@@ -88,18 +88,17 @@ const DashboardPage = () => {
           ))}
         </div>
       </div>
-
-      {/* Issues List */}
-      <h2 className="text-xl font-semibold mt-6 mb-2">Issues</h2>
-      <div className="grid grid-cols-3 gap-4">
+   {/* Issues List */}
+<h2 className="text-xl font-semibold mt-6 mb-2">Issues</h2>
+<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
   {issues.map((issue) => (
-    <div key={issue._id} className="bg-gray-100 p-4 rounded-lg flex justify-between">
+    <div key={issue._id} className="bg-gray-100 p-4 rounded-lg flex flex-col md:flex-row justify-between">
       <div>
         <span className="block font-semibold">{issue.title}</span>
         <span className="text-sm text-gray-600">By: {issue.author?.name}</span>
         <span className="block text-sm">Status: {issue.status}</span>
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 mt-2 md:mt-0"> {/* Add spacing on mobile */}
         <button
           className="text-blue-600 font-semibold"
           onClick={() => navigate(`/issue-form/${issue._id}`)} // Navigate to update form
@@ -116,6 +115,7 @@ const DashboardPage = () => {
     </div>
   ))}
 </div>
+
     </div>
   );
 };
