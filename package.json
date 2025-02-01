@@ -4,17 +4,10 @@
   "main": "backend/index.js",
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
-    "dev": "node backend/index.js",
-    "build": "npm install && npm install --prefix frontend && npm run build  --prefix  frontend",
+    "dev": "nodemon backend/index.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "node backend/index.js"
   },
-=======
-    "dev": "nodemon backend/index.js",
-    "build" : "npm install && npm install --prefix frontend && npm run build  --prefix  frontend",
-    "start": "node backend/index.js"
-   },
->>>>>>> d9818dcbd467adc011c713e833dc1c86d5061ad1
   "keywords": [],
   "author": "",
   "license": "ISC",
