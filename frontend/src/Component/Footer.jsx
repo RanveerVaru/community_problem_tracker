@@ -38,7 +38,12 @@ const Footer = () => {
             <a href="www.linkedin.com/in/ranveer-varu-936389329" target="_blank" rel="noopener noreferrer" className="text-black-300 hover:text-blue-500">
               <FaLinkedin size={24} />
             </a>
-            <a href="https://github.com/RanveerVaru target="_blank" rel="noopener noreferrer" className="text-black-300 hover:text-blue-500">
+            <a 
+              href="https://github.com/RanveerVaru" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-black-300 hover:text-blue-500"
+            >
               <FaGithub size={24} />
             </a>
           </div>
