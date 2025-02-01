@@ -35,7 +35,7 @@ const IssueCard = ({ issue }) => {
   const addComment = async () => {
     if (!newComment.trim()) return;
     try {
-      if(!isAuthorized) {
+      if(!user) {
         toast.error("You must be logged in to comment!")
         navigate('/login')
       } 
